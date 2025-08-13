@@ -13,8 +13,6 @@ class Program
             {
                 Console.WriteLine("welcome to my program! What you want to make?");
                 List();
-                Thread.Sleep(3000);
-                Console.Write("");
                 int UserChoice;
                 if (int.TryParse(Console.ReadLine(), out UserChoice))
                 {
@@ -188,4 +186,5 @@ class Program
             Console.WriteLine("No, You NOT will get the present this year!!");
         }
     }
+
 }
