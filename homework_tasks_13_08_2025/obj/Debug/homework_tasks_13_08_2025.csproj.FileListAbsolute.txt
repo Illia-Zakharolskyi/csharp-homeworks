@@ -1,0 +1,8 @@
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\bin\Debug\homework_tasks_13_08_2025.exe.config
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\bin\Debug\homework_tasks_13_08_2025.exe
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\bin\Debug\homework_tasks_13_08_2025.pdb
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\obj\Debug\homework_tasks_13_08_2025.csproj.AssemblyReference.cache
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\obj\Debug\homework_tasks_13_08_2025.csproj.CoreCompileInputs.cache
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\obj\Debug\homework_tasks_13_08_2025.exe
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\obj\Debug\homework_tasks_13_08_2025.pdb
+C:\Users\ATGA15\source\repos\homework_tasks_13_08_2025\homework_tasks_13_08_2025\obj\Debug\homework_tasks_13_08_2025.exe.config
