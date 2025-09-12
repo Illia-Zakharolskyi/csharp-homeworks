@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -193,17 +193,15 @@ namespace tasks_05_09_2025
         {
             string[] runners = CreateRunners(6, "Runner");
             double[] records = CreateRecords(6);
-            for (int i = 0; i < runners.Length; i++)
-            {
-                Console.WriteLine($"{runners[i]} {records[i]}");
-            }
+            TextAll(runners, records);
+            TheFastest(runners, records);
         }
         private static string[] CreateRunners(int elements, string name)
         {
             string[] runners = new string[elements];
             for (int i = 0; i < elements; i++)
             {
-                runners[i] = $"{name} {i + 1}:";
+                runners[i] = $"{name} {i + 1}";
             }
             return runners;
         }
@@ -217,6 +215,29 @@ namespace tasks_05_09_2025
                 records[i] = secretRecord;
             }
             return records;
+        }
+        private static void TextAll(string[] stringArray, double[] doubleArray)
+        {
+            for(int i = 0; i < stringArray.Length; i++)
+            {
+                Console.WriteLine($"{stringArray[i]}: {doubleArray[i]} seconds");
+            }
+        }
+        private static void TheFastest(string[] stringArray, double[] doubleArray)
+        {
+            double bestRecord = 0;
+            int currentIndex = -1;
+            int i = 0;
+            while (i < stringArray.Length)
+            {
+                if (doubleArray[i] < bestRecord)
+                {
+                    bestRecord = doubleArray[i];
+                    currentIndex++;
+                }
+                i++;
+            }
+            Console.WriteLine($"The best runner was {stringArray[currentIndex]}, record: {bestRecord}");
         }
     }
     internal class HomeWork : IRunnable
