@@ -225,19 +225,24 @@ namespace tasks_05_09_2025
         }
         private static void TheFastest(string[] stringArray, double[] doubleArray)
         {
-            double bestRecord = 0;
-            int currentIndex = -1;
-            int i = 0;
-            while (i < stringArray.Length)
+            double bestRecord = double.MaxValue;
+            int bestIndex = -1;
+            for (int i = 0; i < doubleArray.Length; i++)
             {
                 if (doubleArray[i] < bestRecord)
                 {
-                    bestRecord = doubleArray[i];
-                    currentIndex++;
+                     bestRecord = doubleArray[i];
+                     bestIndex = i;
                 }
-                i++;
             }
-            Console.WriteLine($"The best runner was {stringArray[currentIndex]}, record: {bestRecord}");
+            if (bestIndex != -1)
+            {
+                 Console.WriteLine($"The best runner was {stringArray[bestIndex]}, record: {bestRecord:F2} seconds");
+            }
+            else
+            {
+                 Console.WriteLine("Not valid record was found");
+            }
         }
     }
     internal class HomeWork : IRunnable
@@ -273,3 +278,4 @@ namespace tasks_05_09_2025
         };
     }
 }
+
