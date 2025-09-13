@@ -8,9 +8,9 @@ namespace tasks_05_09_2025
 {
     internal class Program
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8
         static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8
             while (true)
             {
                 try
@@ -28,5 +28,6 @@ namespace tasks_05_09_2025
         }
     }
 }
+
 
 
