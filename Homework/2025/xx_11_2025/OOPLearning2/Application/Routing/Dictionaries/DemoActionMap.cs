@@ -12,6 +12,7 @@ internal static class DemoActionMap
     internal static readonly Dictionary<int, (string description, Action action)> availableActions = new()
     {
         { 0, ("вихід", () => Environment.Exit(0)) },
-        { 1, ("подивитися перший сценарій", () => DemoRunner.RunScenarioDemo()) },
+        { 1, ("подивитися сценарій", () => DemoRunner.RunScenarioDemo()) },
     };
 }
+
