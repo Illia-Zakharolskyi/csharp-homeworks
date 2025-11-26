@@ -1,0 +1,14 @@
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.AssemblyInfoInputs.cache
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.AssemblyInfo.cs
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.csproj.CoreCompileInputs.cache
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\bin\Debug\net9.0\OOPLearning3.exe
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\bin\Debug\net9.0\OOPLearning3.deps.json
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\bin\Debug\net9.0\OOPLearning3.runtimeconfig.json
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\bin\Debug\net9.0\OOPLearning3.dll
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\bin\Debug\net9.0\OOPLearning3.pdb
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.dll
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\refint\OOPLearning3.dll
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.pdb
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\OOPLearning3.genruntimeconfig.cache
+C:\Users\ATGA15\source\repos\OOPLearning3\OOPLearning3\obj\Debug\net9.0\ref\OOPLearning3.dll
