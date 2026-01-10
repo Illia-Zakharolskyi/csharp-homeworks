@@ -1,0 +1,50 @@
+﻿[
+  {
+    "Name": "примарний спів",
+    "Rarity": "Common",
+    "AttackPower": 3,
+    "ManaCost": 3
+  },
+  {
+    "Name": "таємничий погляд",
+    "Rarity": "Common",
+    "AttackPower": 2,
+    "ManaCost": 2
+  },
+  {
+    "Name": "пісня лісу",
+    "Rarity": "Rare",
+    "AttackPower": 2,
+    "ManaCost": 4
+  },
+  {
+    "Name": "чарівний танець",
+    "Rarity": "Rare",
+    "AttackPower": 4,
+    "ManaCost": 4
+  },
+  {
+    "Name": "лісове заклинання",
+    "Rarity": "Rare",
+    "AttackPower": 5,
+    "ManaCost": 6
+  },
+  {
+    "Name": "магічний оберіг",
+    "Rarity": "Epic",
+    "AttackPower": 6,
+    "ManaCost": 9
+  },
+  {
+    "Name": "дух природи",
+    "Rarity": "Epic",
+    "AttackPower": 5,
+    "ManaCost": 8
+  },
+  {
+    "Name": "королева німф",
+    "Rarity": "Legendary",
+    "AttackPower": 5,
+    "ManaCost": 10
+  }
+]
