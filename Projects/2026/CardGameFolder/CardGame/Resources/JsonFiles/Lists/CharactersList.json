@@ -1,0 +1,27 @@
+﻿[
+  {
+    "Name": "Вампір",
+    "RelativeCardsFilePath": "Resources/JsonFiles/CharacterCards/VampireCards.json",
+    "RelativeCharacterCharacteristicsFilePath": "Resources/JsonFiles/CharacterCharacteristics/VampireCharacteristics.json"
+  },
+  {
+    "Name": "Привід",
+    "RelativeCardsFilePath": "Resources/JsonFiles/CharacterCards/GhostCards.json",
+    "RelativeCharacterCharacteristicsFilePath": "Resources/JsonFiles/CharacterCharacteristics/GhostCharacteristics.json"
+  },
+  {
+    "Name": "Відьма",
+    "RelativeCardsFilePath": "Resources/JsonFiles/CharacterCards/WitchCards.json",
+    "RelativeCharacterCharacteristicsFilePath": "Resources/JsonFiles/CharacterCharacteristics/WitchCharacteristics.json"
+  },
+  {
+    "Name": "Німфа",
+    "RelativeCardsFilePath": "Resources/JsonFiles/CharacterCards/NymphCards.json",
+    "RelativeCharacterCharacteristicsFilePath": "Resources/JsonFiles/CharacterCharacteristics/NymphCharacteristics.json"
+  },
+  {
+    "Name": "Перевертень",
+    "RelativeCardsFilePath": "Resources/JsonFiles/CharacterCards/WerewolfCards.json",
+    "RelativeCharacterCharacteristicsFilePath": "Resources/JsonFiles/CharacterCharacteristics/WerewolfCharacteristics.json"
+  }
+]

@@ -1,0 +1,50 @@
+﻿[
+  {
+    "Name": "скримак",
+    "Rarity": "Common",
+    "AttackPower": 3,
+    "ManaCost": 4
+  },
+  {
+    "Name": "прохолодний подих",
+    "Rarity": "Common",
+    "AttackPower": 2,
+    "ManaCost": 2
+  },
+  {
+    "Name": "примарний дотик",
+    "Rarity": "Rare",
+    "AttackPower": 4,
+    "ManaCost": 6
+  },
+  {
+    "Name": "жахливий вой",
+    "Rarity": "Rare",
+    "AttackPower": 5,
+    "ManaCost": 7
+  },
+  {
+    "Name": "похмура завіса",
+    "Rarity": "Rare",
+    "AttackPower": 3,
+    "ManaCost": 5
+  },
+  {
+    "Name": "атака з тіні",
+    "Rarity": "Epic",
+    "AttackPower": 6,
+    "ManaCost": 9
+  },
+  {
+    "Name": "крижаний шепіт",
+    "Rarity": "Epic",
+    "AttackPower": 4,
+    "ManaCost": 7
+  },
+  {
+    "Name": "король примар",
+    "Rarity": "Legendary",
+    "AttackPower": 6,
+    "ManaCost": 12
+  }
+]

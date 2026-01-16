@@ -1,0 +1,50 @@
+﻿[
+  {
+    "Name": "удар кігтями",
+    "Rarity": "Common",
+    "AttackPower": 3,
+    "ManaCost": 4
+  },
+  {
+    "Name": "дика атака",
+    "Rarity": "Common",
+    "AttackPower": 3,
+    "ManaCost": 3
+  },
+  {
+    "Name": "місячний рев",
+    "Rarity": "Rare",
+    "AttackPower": 5,
+    "ManaCost": 7
+  },
+  {
+    "Name": "перетворення",
+    "Rarity": "Rare",
+    "AttackPower": 3,
+    "ManaCost": 4
+  },
+  {
+    "Name": "місячне бажання",
+    "Rarity": "Rare",
+    "AttackPower": 4,
+    "ManaCost": 4
+  },
+  {
+    "Name": "полювання вночі",
+    "Rarity": "Epic",
+    "AttackPower": 6,
+    "ManaCost": 9
+  },
+  {
+    "Name": "розповсюдження страху",
+    "Rarity": "Epic",
+    "AttackPower": 5,
+    "ManaCost": 7
+  },
+  {
+    "Name": "король перевертнів",
+    "Rarity": "Legendary",
+    "AttackPower": 6,
+    "ManaCost": 10
+  }
+]
