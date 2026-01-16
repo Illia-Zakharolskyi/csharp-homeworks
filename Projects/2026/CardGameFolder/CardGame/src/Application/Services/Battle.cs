@@ -2,9 +2,8 @@
 using System;
 using System.Text;
 
-
 // Application
-using CardGame.src.Application.Utilities.Validators;
+using CardGame.src.Application.Storages;
 
 // Domain
 using CardGame.src.Domain.Formatters;
@@ -17,13 +16,15 @@ internal class Battle
     private readonly Character _player;
     private readonly Character _enemy;
     private readonly CardFormatter _cardsFormatter;
+    private readonly UserStatisticsStorage _userStatisticsStorage;
     private bool _isPlayerTurn = false;
 
-    internal Battle(Character player, Character enemy, CardFormatter formatter) 
+    internal Battle(Character player, Character enemy, CardFormatter formatter, UserStatisticsStorage userStatisticsStorage) 
     { 
         _player = player; 
         _enemy = enemy; 
         _cardsFormatter = formatter; 
+        _userStatisticsStorage = userStatisticsStorage;
     }
     internal void Run()
     {
@@ -34,6 +35,8 @@ internal class Battle
         Console.WriteLine("║ Інакше можливі графічні баги при відображенні карт.       ║"); 
         Console.WriteLine("╚═══════════════════════════════════════════════════════════╝"); 
         Console.ResetColor();
+
+        var _userStatistics = _userStatisticsStorage.Load();
 
         Console.ReadKey(true);
 
@@ -72,18 +75,31 @@ internal class Battle
             if (_isPlayerTurn)
             {
                 _player.Attack(_enemy);
+                _userStatistics.UserMovesMade++;
+                _userStatistics.TotalPlayerDamageDealt += _player.LastDamageDealt;
             }
             else
             {
                 Console.WriteLine("Хід ворога...");
+                _userStatistics.OpponentMovesMade++;
                 Thread.Sleep(2000);
                 _enemy.Attack(_player);
+                _userStatistics.TotalOpponentDamageDealt += _enemy.LastDamageDealt;
             }
 
             Console.ReadKey(true);
         }
 
+        _userStatistics.GamesPlayed++;
+
+        if (_player.IsAlive()) _userStatistics.GamesWon++;
+        else _userStatistics.GamesLost++;
+
+        _userStatisticsStorage.Save(_userStatistics);
+
         Console.Clear();
-        Console.WriteLine($"{(_player.IsAlive() ? "Гравець" : "Ворог")} Виграв!");
+
+        string winner = _player.IsAlive() ? "гравець" : "ворог";
+        Console.WriteLine($"{winner} Виграв!");
     }
 }

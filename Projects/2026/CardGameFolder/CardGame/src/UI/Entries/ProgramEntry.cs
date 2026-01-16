@@ -6,12 +6,11 @@ using CardGame.Data.UserProfile;
 
 // Application
 using CardGame.src.Application.Managers;
+using CardGame.src.Application.Storages;
+
 
 // Domain
 using CardGame.src.Domain.Formatters;
-
-// Infastructure
-using CardGame.src.Infastructure.Storages;
 
 // UI
 using CardGame.src.UI.Dispatchers;
@@ -29,18 +28,20 @@ public static class ProgramEntry
 
         // Storages
         UserChoicesStorage userChoicesStorage = new UserChoicesStorage();
+        UserStatisticsStorage userStatisticsStorage = new UserStatisticsStorage();
+        // User Profile
+        UserChoices userChoices = userChoicesStorage.Load();
+        UserStatistics userStatistics = userStatisticsStorage.Load();
         // Formatters
         CardFormatter formatter = new CardFormatter();
         // Managers
-        GameManager manager = new GameManager(formatter);
+        GameManager manager = new GameManager(formatter, userStatisticsStorage);
         // Dispatchers
         MenuDispatcher menuDispatcher = new MenuDispatcher();
-        // User Profile
-        UserChoices userChoices = userChoicesStorage.Load();
 
         while (true)
         {
-            menuDispatcher.Run(new MainMenu(menuDispatcher, manager, userChoices, userChoicesStorage));
+            menuDispatcher.Run(new MainMenu(menuDispatcher, manager, userChoices, userChoicesStorage, userStatisticsStorage));
         }
     }
 }

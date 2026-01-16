@@ -13,12 +13,12 @@ using CardGame.src.Domain.Models;
 // Infastructure
 using CardGame.src.Infastructure.DTO;
 using CardGame.src.Infastructure.Loaders;
-using CardGame.src.Infastructure.Storages;
 
 // UI
 using CardGame.src.UI.Models;
 using CardGame.src.UI.Dispatchers;
 using CardGame.src.UI.Interfaces;
+using CardGame.src.Application.Storages;
 
 namespace CardGame.src.UI.Menus;
 

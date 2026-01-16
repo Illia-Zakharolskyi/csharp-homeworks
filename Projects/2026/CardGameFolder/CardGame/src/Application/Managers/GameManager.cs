@@ -7,6 +7,7 @@ using CardGame.Data.UserProfile;
 // Application
 using CardGame.src.Application.Services;
 using CardGame.src.Application.Factories;
+using CardGame.src.Application.Storages;
 
 // Domain
 using CardGame.src.Domain.Models;
@@ -22,9 +23,11 @@ internal class GameManager
     private readonly CardFormatter _formatter; 
     private readonly CharacterFactory _characterFactory = new CharacterFactory();
     private readonly PathResolver _pathResolver = new PathResolver();
-    internal GameManager(CardFormatter formatter) 
+    private readonly UserStatisticsStorage _userStatisticsStorage;
+    internal GameManager(CardFormatter formatter, UserStatisticsStorage userStatisticsStorage) 
     { 
         _formatter = formatter; 
+        _userStatisticsStorage = userStatisticsStorage;
     }
 
     public void StartBattle(UserChoices choices) 
@@ -40,7 +43,7 @@ internal class GameManager
             return;
         }
 
-        var battle = new Battle(player, enemy, _formatter);
+        var battle = new Battle(player, enemy, _formatter, _userStatisticsStorage);
         battle.Run(); 
     }
 }

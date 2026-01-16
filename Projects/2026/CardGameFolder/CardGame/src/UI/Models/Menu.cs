@@ -3,9 +3,10 @@ using System;
 
 // Data
 using CardGame.Data.UserProfile;
+using CardGame.src.Application.Storages;
+
 
 // Infrastructure
-using CardGame.src.Infastructure.Storages;
 
 // UI
 using CardGame.src.UI.Dispatchers;

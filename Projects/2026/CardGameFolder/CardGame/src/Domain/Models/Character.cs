@@ -18,6 +18,8 @@ public class Character
 
     private readonly bool IsPlayer;
 
+    internal int LastDamageDealt = 0;
+
     private List<Card> Deck = new();
     internal List<Card> Hand { get; private set; }
 
@@ -27,7 +29,7 @@ public class Character
     {
         { "Вампір", 0.1 },
         { "Привід", 0.1 },
-        { "Оборотень", 0.1 },
+        { "Перевертень", 0.1 },
         { "Німфа", 0.1 },
         { "Відьма", 0.07 }
     };
@@ -149,6 +151,7 @@ public class Character
         Hand.Remove(playerCard);
         UseMana(playerCard);
         target.TakeDamage(this, playerCard);
+        LastDamageDealt = playerCard.AttackPower;
 
         Console.WriteLine($"гравець використував картку '{playerCard.Name}' завдаючи ворогу {playerCard.AttackPower} одиниць збитку");
         return; 
@@ -171,6 +174,7 @@ public class Character
         Hand.Remove(enemyCard);
         UseMana(enemyCard);
         target.TakeDamage(this, enemyCard);
+        LastDamageDealt = enemyCard.AttackPower;
 
         Console.WriteLine($"Ворог використував картку '{enemyCard.Name}' завдаючи гравцю {enemyCard.AttackPower} одиниць збитку");
         return;

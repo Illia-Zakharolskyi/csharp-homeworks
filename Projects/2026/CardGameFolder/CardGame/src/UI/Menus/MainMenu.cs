@@ -1,34 +1,38 @@
-﻿﻿// .Net 9.0
+﻿// .Net 9.0
 using System;
 
 // Data
 using CardGame.Data.UserProfile;
 
 // Application
-using CardGame.src.Application.Managers; 
+using CardGame.src.Application.Managers;
 
 // Domain
 using CardGame.src.Domain.Models;
 
 // Infastructure
-using CardGame.src.Infastructure.Storages;
 
 // UI
-using CardGame.src.UI.Models; 
-using CardGame.src.UI.Interfaces; 
+using CardGame.src.UI.Models;
+using CardGame.src.UI.Interfaces;
 using CardGame.src.UI.Dispatchers;
+using CardGame.src.Application.Storages;
 
 namespace CardGame.src.UI.Menus; 
 
 internal class MainMenu : Menu, IMenu 
 { 
-    private readonly CharacterSelectionMenu _characterSelectionMenu; 
-    private readonly GameManager _gameManager; 
+    private readonly CharacterSelectionMenu _characterSelectionMenu;
+    private readonly UserStatisticMenu _userStatisticMenu;
+
+    private readonly GameManager _gameManager;
     
-    internal MainMenu(MenuDispatcher dispatcher, GameManager gameManager, UserChoices userChoices, UserChoicesStorage userChoicesStorage) : base(dispatcher, userChoices, userChoicesStorage) 
+    internal MainMenu(MenuDispatcher dispatcher, GameManager gameManager, UserChoices userChoices, UserChoicesStorage userChoicesStorage, UserStatisticsStorage userStatisticsStorage) 
+        : base(dispatcher, userChoices, userChoicesStorage) 
     { 
         _gameManager = gameManager;  
         _characterSelectionMenu = new CharacterSelectionMenu(dispatcher, userChoices, _userChoicesStorage); 
+        _userStatisticMenu = new UserStatisticMenu(dispatcher, userChoices, userChoicesStorage, userStatisticsStorage);
     } 
 
     public void Display() 
@@ -40,8 +44,9 @@ internal class MainMenu : Menu, IMenu
         return new Dictionary<int, (string description, Action action)> 
         { 
             { 0, ("Вихід", () => Environment.Exit(0)) }, 
-            { 1, ("Вибір персонажа", () => _dispatcher.PushMenu(_characterSelectionMenu)) },
-            { 2, ("Запустити битву", () => StartBattleAction()) }
+            { 1, ("Запустити битву", () => StartBattleAction()) },
+            { 2, ("Вибір персонажа", () => _dispatcher.PushMenu(_characterSelectionMenu)) },
+            { 3, ("Статистика", () => _dispatcher.PushMenu(_userStatisticMenu)) }
         }; 
     }
     private void StartBattleAction()
